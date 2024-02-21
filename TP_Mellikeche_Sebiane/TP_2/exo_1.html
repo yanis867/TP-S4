@@ -1,0 +1,70 @@
+<html>
+
+<head>
+  <title>Registration Form</title>
+</head>
+
+<body>
+  <h1>English Language Education Registration Form</h1>
+  <form action="form.php" method="POST">
+    <fieldset>
+      <legend>Student Personal Details</legend>
+
+      <label for="fname">Family Name</label>
+      <input required maxlength="5" name="fname" type="text" placeholder="Your Family Name" id="fname">
+      <br>
+      <label for="name">Name</label>
+      <input required name="name" type="text" placeholder="Your Name" id="name">
+      <br>
+      <label for="phone">Phone Number</label>
+      <input maxlength="14" name="phone" type="tel" placeholder="Phone: XX-XX-XX-XX-XX" id="phone">
+      <br>
+      <label for="mail">Mail Adress</label>
+      <input required name="mail" type="email" placeholder="Your Mail Adress" id="mail">
+      <br>
+      <label for="bdate">Birthdate</label>
+      <input required name="bdate" type="date" placeholder="Your Birthdate" id="bdate">
+      <br>
+      <label for="language">Spoken Languages</label>
+      <input name="language" type="checkbox" id="en" value="english"><label for="en">English</label>
+      <input name="language" type="checkbox" id="fr" value="french"><label for="fr">French</label>
+      <input name="language" type="checkbox" id="ar" value="arabic"><label for="ar">Arabic</label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Educational Background</legend>
+
+      <label for="level">What is your level in english?</label>
+      <input name="level" type="radio" id="low" value="low"><label for="low">Low</label>
+      <input name="level" type="radio" id="mid" value="middle"><label for="mid">Middle</label>
+      <input name="level" type="radio" id="high" value="high"><label for="high">High</label>
+      <br>
+      <label for="test">Have you taken an international test in the last two years?</label>
+      <input name="test" type="radio" id="yes" value="yes"><label for="yes">Yes</label>
+      <input name="test" type="radio" id="no" value="no"><label for="no">No</label>
+      <br>
+      <label for="tsel">If yes, which test</label>
+      <select id="tsel">
+        <option value="ielts">IELTS</option>
+        <option value="toefl">TOEFL</option>
+        <option value="cpe">CPE</option>
+      </select>
+      <br>
+      <label for="score">Score
+        <input name="score" type="number" min="1" max="100" id="score" placeholder="30.5">
+        %
+      </label>
+      <br>
+      <label for="cert">Please attach a copy of your certificate</label>
+      <input name="certificate" type="file" id="cert">
+    </fieldset>
+    <fieldset>
+      <legend>Your Leisure</legend>
+      <textarea name="leisure" placeholder="Insert here some of your leisures!" rows="8" cols="100"></textarea>
+    </fieldset>
+    <input type="submit" value="Validate">
+    <input type="reset">
+  </form>
+</body>
+
+</html>
